@@ -1,12 +1,13 @@
 {
   "name": "whatauth",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple authentication helper.",
   "main": "./dist/whatauth.js",
   "scripts": {
     "test": "mocha",
     "build": "babel lib -d dist"
   },
+  "repository": "https://github.com/w-hat/whatauth",
   "author": "Gregory Clark",
   "license": "ISC",
   "dependencies": {
