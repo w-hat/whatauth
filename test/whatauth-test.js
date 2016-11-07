@@ -156,7 +156,7 @@ describe('WhatAuth', () => {
           let body;
           if (url === 'https://api.github.com/user') {
             body = `{"name":"Github User","email":null,"id":"ghid234",
-                    "avatar_url":"some-img?v=3"}`;
+                    "avatar_url":"https://avatars.githubusercontent.com/u/ghid234?v=3"}`;
           } else if (url === 'https://api.github.com/user/emails') {
             body = `[{"email":"githubuser@example.com","primary":true,"verified":true}]`;
           } else {
@@ -175,7 +175,8 @@ describe('WhatAuth', () => {
           assert.equal(profile.ident, 'github:ghid234');
           assert.equal(profile.name,  'Github User');
           assert.equal(profile.email, 'githubuser@example.com');
-          assert.equal(profile.image, 'some-img?v=3');
+          assert.equal(profile.image, 'https://avatars.githubusercontent.com/u/ghid234?v=3&s=200');
+          // https://avatars.githubusercontent.com/u/21134804?s=400
           done();
         } catch (e) {
           done(e);

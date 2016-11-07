@@ -29,7 +29,8 @@ var wa = new WhatAuth({
 Then fetch a user's profile with a query object.  The query object should
 contain a `provider`, an `authorizationCode`, and a `redirectUri`.
 This query object may come from a frontend library such as
-[Torii](https://github.com/Vestorly/torii).
+[ember-what-session](https://github.com/w-hat/ember-what-session) or
+[torii](https://github.com/Vestorly/torii).
 
 ```js
 wa.fetch(query).then(function(profile) {
